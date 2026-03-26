@@ -1,17 +1,47 @@
 ---
+// Importiamo il Layout e i componenti
+import Layout from '../layouts/Layout.astro';
+import Timeline from '../components/Timeline.jsx';
+import Iban from '../components/Iban.jsx';
 
+// Logica lato server (opzionale)
+const dataMatrimonio = "2026";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Paride & Co. - Il nostro Viaggio">
+  <main class="max-w-4xl mx-auto py-12 px-4">
+    
+    <header class="text-center mb-20">
+      <h1 class="text-6xl font-serif text-slate-900 mb-4 tracking-tight">
+        Paride & [Nome]
+      </h1>
+      <p class="text-slate-500 uppercase tracking-[0.2em] text-sm font-semibold">
+        {dataMatrimonio} • Verso l'infinito
+      </p>
+    </header>
+
+    <section class="mb-32">
+      <Timeline client:visible />
+    </section>
+
+    <section id="regalo">
+      <Iban client:load />
+    </section>
+
+    <footer class="text-center text-slate-400 text-sm mt-20 pb-10">
+      <p>Fatto con ❤️ da un dev in ansia da matrimonio</p>
+    </footer>
+
+  </main>
+</Layout>
+
+<style>
+  /* Se vuoi aggiungere CSS specifico solo per questa pagina */
+  main {
+    animation: fadeIn 0.8s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

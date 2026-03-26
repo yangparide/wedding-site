@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+    --color-wedding-sage: #8DA399;
+    --color-wedding-cream: #FDFCF9;
+    --color-wedding-gold: #C5A065;
+    --color-wedding-slate: #566573;
+}
+
+:root {
+    background-color: var(--color-wedding-cream);
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}

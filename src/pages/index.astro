@@ -1,52 +1,62 @@
 ---
-// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import Timeline from '../components/Timeline.jsx';
 import Iban from '../components/Iban.jsx';
 
-// --- CONFIGURAZIONE IMMAGINE HERO (OPZIONE 1: FUJI & SAKURA) ---
-// Questa è l'immagine che abbiamo scelto insieme. È ad alta risoluzione e libera da diritti.
-const heroImageUrl = "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=2000&auto=format&fit=crop";
+// --- CONFIGURAZIONE FISSA ---
+const fotoFuji = "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=2000&auto=format&fit=crop";
+
+// Texture giapponese sottile
+const textureUrl = "https://www.toptal.com/designers/subtlepatterns/uploads/japanese-sayagata.png";
 ---
 
 <Layout title="Paride & Marika - Il nostro Viaggio">
-  <main class="bg-wedding-cream">
+  <main class="bg-[#FDFCF9] min-h-screen">
     
-    <header class="w-full text-center bg-white pt-20 pb-10 border-b border-slate-100">
-      <div class="max-w-4xl mx-auto px-6 mb-16">
-        <h1 class="text-6xl md:text-7xl font-serif text-wedding-slate mb-5 tracking-tight">
-          Paride & Marika
-        </h1>
-        <p class="text-slate-500 uppercase tracking-[0.3em] text-xs md:text-sm font-bold">
-          2026 • VERSO L'INFINITO
-        </p>
+    <header class="w-full text-center pt-16 pb-8 relative overflow-hidden bg-[#FDFCF9]">
+      
+      <div 
+        class="absolute inset-0 z-0 opacity-15 pointer-events-none" 
+        style={`background-image: url(${textureUrl}); background-repeat: repeat; filter: grayscale(100%);`}
+      ></div>
+
+      <div class="max-w-4xl mx-auto px-6 mb-12 relative z-10">
+        <div class="inline-block bg-white p-8 rounded-[2.5rem] border border-[#C5A065]/60 shadow-inner group hover:shadow-xl hover:-translate-y-1 transition-all duration-700 ease-out-quint">
+          <h1 class="text-5xl md:text-6xl font-serif text-[#566573] tracking-tight flex items-center justify-center gap-4 mb-4">
+            <span>Paride</span>
+            <span class="text-2xl md:text-3xl font-sans text-[#C5A065] opacity-80 italic">&</span>
+            <span>Marika</span>
+          </h1>
+          <p class="text-[#C5A065] uppercase tracking-[0.5em] text-[10px] md:text-xs font-bold leading-relaxed">
+            2026 • VERSO L'INFINITO
+          </p>
+        </div>
       </div>
 
-      <div class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden group">
-        
-        {/* L'Immagine vera e propria: object-cover la fa adattare perfettamente */}
+      <div class="relative w-full h-[45vh] md:h-[55vh] overflow-hidden group border-y border-slate-100/50 shadow-sm bg-slate-100">
         <img 
-          src={heroImageUrl}
-          alt="Monte Fuji con ciliegi in fiore - Il nostro sogno giapponese" 
-          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[3000ms] ease-out-quint"
+          src={fotoFuji}
+          alt="Monte Fuji e Ciliegi" 
+          class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-[4000ms] ease-out-quint"
+          loading="eager"
         />
         
-        {/* Un overlay scuro e sfumato (gradient) per dare profondità e far risaltare il bianco */}
-
-<div class="absolute inset-0 bg-[#8DA399]/40 backdrop-blur-[1px]"></div>        
-        {/* Testo e Icona sopra l'immagine */}
-        <div class="absolute bottom-12 left-0 right-0 z-10 text-white flex flex-col items-center">
-            <span class="text-[11px] uppercase tracking-[0.25em] font-bold bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full mb-4 border border-white/20 shadow-inner">
-                IL NOSTRO SOGNO: GIAPPONE
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+        
+        <div class="absolute bottom-10 left-0 right-0 z-10 text-white flex flex-col items-center drop-shadow-lg">
+            <span class="text-[10px] uppercase tracking-[0.3em] font-bold bg-black/20 backdrop-blur-md px-6 py-3 rounded-full mb-4 border border-white/20">
+                Il nostro sogno: Giappone
             </span>
-            <a href="#viaggio" class="text-white hover:text-wedding-gold transition-colors p-2 rounded-full hover:bg-white/10">
-                <svg class="animate-bounce" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            <a href="#viaggio" id="scroll-trigger" class="animate-bounce opacity-90 hover:opacity-100 transition-opacity p-2 cursor-pointer rounded-full hover:bg-white/10">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
             </a>
         </div>
       </div>
     </header>
 
-    <div id="viaggio">
+    <div id="viaggio" class="scroll-mt-10">
       <Timeline client:visible />
     </div>
 
@@ -54,57 +64,50 @@ const heroImageUrl = "https://images.unsplash.com/photo-1524413840807-0c3cb6fa80
       <Iban client:load />
     </div>
 
-    <footer class="py-20 text-center bg-white border-t border-slate-100">
-      <p class="text-slate-400 text-sm font-light leading-relaxed">
-        Non vediamo l'ora di condividere questo viaggio con voi.<br/>
-        Fatto con ❤️ da Paride per il matrimonio perfetto
+    <footer class="py-24 text-center bg-white border-t border-slate-100">
+      <p class="text-slate-400 text-xs font-light tracking-widest uppercase mb-2">
+        Paride & Marika
+      </p>
+      <p class="text-slate-300 text-[10px]">
+        Fatto con ❤️ nel 2026
       </p>
     </footer>
 
   </main>
 </Layout>
 
-<script>
-  // Selezioniamo tutti i link che iniziano con #
-  const links = document.querySelectorAll('a[href^="#"]');
-  
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        // Calcoliamo la posizione dell'elemento
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition;
-        
-        // DURATA IN MILLISECONDI (1500 = 1.5 secondi)
-        // Aumenta questo numero per renderlo ancora più lento!
-        const duration = 1500; 
-        
-        let start = null;
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollLink = document.querySelector('a[href^="#"]');
+    if (scrollLink) {
+      scrollLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const startPosition = window.pageYOffset;
+          const distance = targetPosition - startPosition;
+          const duration = 1800;
+          let start = null;
 
-        // Funzione di "Easing" (rende lo scroll morbido all'inizio e alla fine)
-        const easeInOutCubic = (t, b, c, d) => {
-          t /= d/2;
-          if (t < 1) return c/2*t*t*t + b;
-          t -= 2;
-          return c/2*(t*t*t + 2) + b;
-        };
+          const easeInOutCubic = (t, b, c, d) => {
+            t /= d/2;
+            if (t < 1) return c/2*t*t*t + b;
+            t -= 2;
+            return c/2*(t*t*t + 2) + b;
+          };
 
-        const animation = (currentTime) => {
-          if (start === null) start = currentTime;
-          const timeElapsed = currentTime - start;
-          const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
-          window.scrollTo(0, run);
-          if (timeElapsed < duration) requestAnimationFrame(animation);
-        };
-
-        requestAnimationFrame(animation);
-      }
-    });
+          const animation = (currentTime) => {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+          };
+          requestAnimationFrame(animation);
+        }
+      });
+    }
   });
 </script>

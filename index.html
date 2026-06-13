@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paride & Marika - Honeymoon Tour 2026</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GESTIONE FONT E TEXTURE INLINE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght=700&family=Space+Mono:wght=400;700&display=swap');
+
+        .font-rock-title {
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .font-ticket-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Texture Melange / Carta Ruvida da Poster stampato (Corpo Pagina) */
+        .bg-texture-melange {
+            background-color: #f7f6f2;
+            background-image: radial-gradient(#e1e0da 0.5px, transparent 0.5px), radial-gradient(#e1e0da 0.5px, #f7f6f2 0.5px);
+            background-size: 4px 4px;
+            background-position: 0 0, 2px 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-texture-melange text-[#333333] font-sans antialiased pb-16 overflow-x-hidden">
+
+    <!-- HEADER: CON TEXTURE A RETINATO UNDERGROUND (STILE POSTER DA CONCERTO) -->
+    <header class="w-full text-white text-center pt-24 pb-20 relative border-b-4 border-[#E63946] overflow-hidden"
+        style="background-color: #1a1a1a; background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 0px); background-size: 10px 10px;">
+
+        <!-- Bandiera del Giappone: Cerchio Rosso Sfocato sullo sfondo -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 bg-[#E63946] rounded-full opacity-20 blur-md pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center relative z-10">
+
+            <!-- NOMI IN EVIDENZA STILE HEADLINER DA FESTIVAL -->
+            <h2
+                class="text-2xl md:text-4xl font-bold tracking-tight uppercase font-rock-title text-[#E63946] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                PARIDE & MARIKA
+            </h2>
+
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-slate-400 font-ticket-mono mb-6">
+                HONEYMOON WORLD TOUR 2026 // 新婚旅行
+            </p>
+
+            <h1
+                class="text-4xl md:text-7xl font-black tracking-tighter uppercase font-rock-title text-white leading-none">
+                JAPAN <span class="text-[#E63946]">LIVE</span>
+            </h1>
+            <p class="text-xs font-ticket-mono text-slate-500 mt-3 tracking-[0.3em]">日本ツアー</p>
+        </div>
+    </header>
+
+    <!-- CONTENITORE RELATIVO PER IL COLLAGE DI FOTO ASIMMETRICHE LOCALI -->
+    <div class="relative w-full">
+
+        <!-- FOTO SFONDO 1: TOKYO STREET NEON -->
+        <div
+            class="hidden xl:block absolute left-[-60px] top-[40px] w-56 h-72 border-4 border-white bg-white shadow-xl -rotate-12 opacity-35 hover:opacity-100 hover:rotate-[-4deg] transition-all duration-500 z-0 overflow-hidden rounded-sm">
+            <img src="./img/david-edelstein-N4DbvTUDikw-unsplash.jpg" alt="Tokyo Alley"
+                class="w-full h-full object-cover grayscale">
+        </div>
+
+        <!-- FOTO SFONDO 2: LANTERNE TRADIZIONALI -->
+        <div
+            class="hidden xl:block absolute right-[-80px] top-[180px] w-64 h-64 border-4 border-white bg-white shadow-xl rotate-12 opacity-30 hover:opacity-100 hover:rotate-[6deg] transition-all duration-500 z-0 overflow-hidden rounded-sm">
+            <img src="./img/jezael-melgoza-alY6_OpdwRQ-unsplash.jpg" alt="Japan Lanterns"
+                class="w-full h-full object-cover grayscale">
+        </div>
+
+        <!-- FOTO SFONDO 3: PAGODA TRADIZIONALE -->
+        <div
+            class="hidden xl:block absolute left-[-90px] top-[600px] w-64 h-48 border-4 border-white bg-white shadow-xl rotate-6 opacity-30 hover:opacity-100 hover:rotate-[2deg] transition-all duration-500 z-0 overflow-hidden rounded-sm">
+            <img src="./img/masaaki-komori-qwPSnBvdhtI-unsplash.jpg" alt="Pagoda"
+                class="w-full h-full object-cover grayscale">
+        </div>
+
+        <!-- FOTO SFONDO 4: TRENO SHINKANSEN IN CORSA -->
+        <div
+            class="hidden xl:block absolute right-[-50px] top-[950px] w-56 h-72 border-4 border-white bg-white shadow-xl -rotate-6 opacity-35 hover:opacity-100 hover:rotate-[-2deg] transition-all duration-500 z-0 overflow-hidden rounded-sm">
+            <img src="./img/su-san-lee-E_eWwM29wfU-unsplash.jpg" alt="Shinkansen"
+                class="w-full h-full object-cover grayscale">
+        </div>
+
+        <!-- INTRO NARRATIVO + GRAFICA ATTENZIONE -->
+        <section class="max-w-2xl mx-auto px-6 pt-12 text-center font-ticket-mono relative z-10">
+            <span class="text-xs font-bold text-[#E63946] uppercase tracking-widest block mb-2">// THE MANIFESTO</span>
+            <h2 class="text-2xl font-black uppercase text-[#1A1A1A] mb-4">La Nostra Prossima Avventura</h2>
+            <p class="text-slate-600 text-sm font-sans leading-relaxed text-justify md:text-center mb-8">
+                Per la nostra luna di miele non cercavamo una spiaggia dove riposare, ma un'experience che ci lasciasse
+                senza fiato. Il Giappone è questo: il contrasto perfetto tra il caos dei neon e il silenzio dei templi
+                antichi, tra la tecnologia del futuro e tradizioni millenarie. Un viaggio zaino in spalla, esplorando
+                vicoli nascosti, cibo incredibile e l'energia di una terra unica. Sarà il nostro tour più grande, e qui
+                sotto trovate la scaletta delle tappe che vivremo anche grazie a voi.
+            </p>
+
+            <!-- ELEMENTO GRAFICO ILLUSTRAZIONE: MONTE FUJI STILE POSTER UNDERGROUND -->
+            <div
+                class="w-full max-w-md mx-auto my-6 p-4 bg-white border-2 border-[#1A1A1A] rounded-xl shadow-[4px_4px_0px_0px_#1A1A1A] overflow-hidden flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="w-full h-auto text-[#1A1A1A]">
+                    <circle cx="200" cy="50" r="35" fill="#E63946" opacity="0.15" />
+                    <line x1="20" y1="100" x2="380" y2="100" stroke="currentColor" stroke-width="2" />
+                    <line x1="40" y1="107" x2="360" y2="107" stroke="currentColor" stroke-width="1"
+                        stroke-dasharray="8 4" />
+                    <polygon points="120,100 200,30 280,100" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linejoin="round" />
+                    <polygon points="183,45 200,30 217,45 208,50 200,45 192,52" fill="currentColor" />
+                    <text x="30" y="50" font-family="sans-serif" font-weight="bold" font-size="10" fill="#E63946"
+                        letter-spacing="2">富士山</text>
+                </svg>
+            </div>
+
+            <div class="w-24 h-0.5 bg-[#1A1A1A]/10 mx-auto mt-6 border-dashed border-t"></div>
+        </section>
+
+        <!-- IL TOUR POSTER -->
+        <section class="py-12 px-4 max-w-4xl mx-auto relative z-10">
+
+            <div class="text-center mb-12">
+                <h2
+                    class="text-xl font-ticket-mono font-black text-[#1A1A1A] tracking-[0.2em] uppercase border-2 border-[#1A1A1A] inline-block px-6 py-2 rounded-md bg-white shadow-[4px_4px_0px_0px_#1A1A1A]">
+                    THE TOUR STAGES // 日程表
+                </h2>
+            </div>
+
+            <!-- GRIGLIA DELLE TAPPE -->
+            <div class="space-y-12">
+
+                <!-- TAPPA 1: TOKYO -->
+                <div
+                    class="bg-white text-[#333333] border-2 border-[#1A1A1A] rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_#1A1A1A] flex flex-col md:flex-row">
+                    <div class="md:w-1/3 h-48 md:h-auto relative shrink-0 bg-slate-900">
+                        <img src="./img/tokyo.avif" alt="Tokyo"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 opacity-90">
+                        <span
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            01</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
+                        <div>
+                            <div
+                                class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">TOKYO //
+                                    東京</span>
+                                <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Neon &
+                                    Cyberpunk</span>
+                            </div>
+                            <h3 class="text-xl font-black uppercase text-[#1A1A1A]">Luci Psichedeliche & Rock Bar</h3>
+                            <p class="text-slate-500 text-sm mt-2 font-sans leading-relaxed">L'incrocio impazzito di
+                                Shibuya, i negozi di dischi storici, l'elettronica di Akihabara e le minuscole taverne
+                                di Shinjuku che sembrano uscite da una fanzine underground.</p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs bg-slate-50 p-3 rounded border border-dashed">
+                            <span class="text-slate-400 uppercase">Idea Regalo:</span>
+                            <span class="font-bold text-[#E63946] uppercase">🍜 Ramen & Rock Club Ticket</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAPPA 2: KYOTO -->
+                <div
+                    class="bg-white text-[#333333] border-2 border-[#1A1A1A] rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_#1A1A1A] flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/3 h-48 md:h-auto relative shrink-0 bg-slate-900">
+                        <img src="./img/kyoto.avif" alt="Kyoto"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 opacity-90">
+                        <span
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            02</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
+                        <div>
+                            <div
+                                class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">KYOTO //
+                                    京都</span>
+                                <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Tradizione
+                                    Unplugged</span>
+                            </div>
+                            <h3 class="text-xl font-black uppercase text-[#1A1A1A]">Templi Millenari & Bambù</h3>
+                            <p class="text-slate-500 text-sm mt-2 font-sans leading-relaxed">Il set acustico del
+                                viaggio: i corridoi di torii rossi al Fushimi Inari, il silenzio della foresta di bambù
+                                di Arashiyama e il fascino antico del quartiere di Gion.</p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs bg-slate-50 p-3 rounded border border-dashed">
+                            <span class="text-slate-400 uppercase">Idea Regalo:</span>
+                            <span class="font-bold text-[#E63946] uppercase">🚄 Biglietto Treno Proiettile
+                                Shinkansen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAPPA 3: RYOKAN & ONSEN -->
+                <div
+                    class="bg-white text-[#333333] border-2 border-[#1A1A1A] rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_#1A1A1A] flex flex-col md:flex-row">
+                    <div class="md:w-1/3 h-48 md:h-auto relative shrink-0 bg-slate-900">
+                        <img src="./img/onsen.avif" alt="Onsen Ryokan"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 opacity-90">
+                        <span
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            03</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
+                        <div>
+                            <div
+                                class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">ONSEN EXPERIENCE
+                                    // 温泉</span>
+                                <span
+                                    class="text-[11px] bg-[#E63946]/10 text-[#E63946] px-2 py-0.5 rounded font-bold">Backstage
+                                    VIP</span>
+                            </div>
+                            <h3 class="text-xl font-black uppercase text-[#1A1A1A]">Relax su Tatami & Sorgenti Termali
+                            </h3>
+                            <p class="text-slate-500 text-sm mt-2 font-sans leading-relaxed">Una pausa rigenerante in
+                                una locanda tradizionale. Dormire sui tatami, cenare con pietanze locali pazzesche e
+                                immergersi nelle calde sorgenti termali all'aperto.</p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs bg-slate-50 p-3 rounded border border-dashed">
+                            <span class="text-slate-400 uppercase">Idea Regalo:</span>
+                            <span class="font-bold text-[#E63946] uppercase">🏮 Notte in Ryokan Tradizionale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAPPA 4: OSAKA -->
+                <div
+                    class="bg-white text-[#333333] border-2 border-[#1A1A1A] rounded-xl overflow-hidden shadow-[6px_6px_0px_0px_#1A1A1A] flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/3 h-48 md:h-auto relative shrink-0 bg-slate-900">
+                        <img src="./img/osaka.jpg" alt="Osaka"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 opacity-90">
+                        <span
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            04</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
+                        <div>
+                            <div
+                                class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">OSAKA //
+                                    大阪</span>
+                                <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Heavy Street
+                                    Food</span>
+                            </div>
+                            <h3 class="text-xl font-black uppercase text-[#1A1A1A]">I Pezzi Forti di Dotonbori</h3>
+                            <p class="text-slate-500 text-sm mt-2 font-sans leading-relaxed">La capitale dell'energia e
+                                del cibo da strada. Serate passate tra le insegne giganti a mangiare Takoyaki
+                                incandescenti e Okonomiyaki piastrati a ritmo rock.</p>
+                        </div>
+                        <div
+                            class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs bg-slate-50 p-3 rounded border border-dashed">
+                            <span class="text-slate-400 uppercase">Idea Regalo:</span>
+                            <span class="font-bold text-[#E63946] uppercase">🍱 Street Food Crew Pass</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEZIONE LISTA NOZZE / IBAN -->
+        <section class="max-w-2xl mx-auto px-4 my-4 relative z-10">
+            <div
+                class="bg-white border-2 border-dashed border-[#1A1A1A] p-8 rounded-2xl text-center font-ticket-mono relative overflow-hidden shadow-md">
+
+                <div class="absolute left-0 right-0 top-0 h-2 bg-[#E63946]"></div>
+
+                <h3 class="text-2xl font-black uppercase tracking-wider text-[#1A1A1A] mb-2">
+                    SCONTRINO DI BORDO / LISTA NOZZE
+                </h3>
+                <p class="text-xs text-slate-500 max-w-md mx-auto mb-8 uppercase tracking-wide">
+                    Gente del Backstage, per finanziare una delle tappe del nostro "Japan Tour" potete usare il canale
+                    ufficiale:
+                </p>
+
+                <div onclick="copyIban()"
+                    class="bg-[#1A1A1A] text-white p-5 rounded-xl inline-block w-full max-w-lg shadow-inner text-left md:text-center cursor-pointer group hover:bg-[#222] transition-colors relative">
+                    <span class="text-[10px] text-slate-400 block uppercase tracking-[0.2em] mb-1">IBAN (CLICCA PER
+                        COPIARE)</span>
+                    <span id="iban-text"
+                        class="text-sm md:text-lg font-bold tracking-wider text-white block font-mono bg-black/40 py-2 px-3 rounded border border-slate-800 group-hover:border-[#E63946] transition-colors">
+                        IT 99 X 0000 0000 0000 0000 0000 000
+                    </span>
+                    <div class="w-full h-px bg-slate-700 my-4 border-dashed border-t"></div>
+                    <div class="flex justify-between items-center px-1">
+                        <span class="text-[10px] text-[#E63946] uppercase font-bold tracking-widest">
+                            Intestato a: Paride e Marika
+                        </span>
+                        <span id="copy-toast"
+                            class="text-[9px] text-slate-400 uppercase font-bold tracking-wider opacity-0 transition-opacity duration-300">Copiato
+                            negli appunti!</span>
+                    </div>
+                </div>
+
+                <p class="text-[11px] text-slate-400 uppercase tracking-widest mt-8">
+                    ありがとうございました // GRAZIE DI CUORE PER IL SUPPORTO!
+                </p>
+            </div>
+        </section>
+
+    </div> <!-- FINE DEL CONTENITORE RELATIVO -->
+
+    <!-- FOOTER CON RINGRAZIAMENTI AI FOTOGRAFI -->
+    <footer class="mt-16 text-center font-ticket-mono relative z-10 px-4">
+        <p class="text-slate-400 text-[10px] tracking-widest uppercase mb-1">
+            PARIDE & MARIKA HONEYMOON BACKSTAGE
+        </p>
+        <p class="text-slate-400 text-[9px] mb-6">
+            CREW ONLY • TOKYO TO MILANO • 2026
+        </p>
+
+        <div
+            class="max-w-md mx-auto pt-4 border-t border-dashed border-slate-300/60 text-[8px] text-slate-400 uppercase tracking-wider leading-relaxed">
+            <span>Visual Design Credits via Unsplash: </span>
+            <span class="font-bold">D. Edelstein</span>,
+            <span class="font-bold">J. Melgoza</span>,
+            <span class="font-bold">M. Komori</span> &amp;
+            <span class="font-bold">S. S. Lee</span>.
+        </div>
+    </footer>
+
+    <!-- SCRIPT DI COPIA AUTOMATICA IBAN -->
+    <script>
+        function copyIban() {
+            const iban = document.getElementById('iban-text').innerText;
+            navigator.clipboard.writeText(iban).then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100', 'text-green-400');
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100', 'text-green-400');
+                    toast.classList.add('opacity-0');
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

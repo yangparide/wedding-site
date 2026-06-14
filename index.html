@@ -365,6 +365,9 @@
         <p class="text-[#F8F8F8] text-[10px] tracking-[0.35em] uppercase mb-1">
             PARIDE & MARIKA HONEYMOON JAPAN TOUR BACKSTAGE
         </p>
+        <button onclick="creditsDialog.showModal()" class="text-[9px] text-[#E63946] hover:text-white uppercase tracking-widest mt-2 transition-colors">
+            // Crediti Foto
+        </button>
     </div>
     <!-- Resto del footer invariato -->
 </footer>
@@ -383,7 +386,27 @@
             });
         }
     </script>
-
+<dialog id="creditsDialog" class="p-0 rounded-2xl border-2 border-[#1A1A1A] shadow-2xl w-[90%] max-w-md backdrop:bg-black/50">
+    <div class="p-6 font-ticket-mono">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-sm font-bold uppercase text-[#E63946]">Credits Unsplash</h3>
+            <button onclick="creditsDialog.close()" class="text-slate-400 hover:text-black font-bold">✕</button>
+        </div>
+        <p class="text-[11px] text-slate-600 leading-relaxed">
+            Foto scattate dai fotografi di <a href="https://unsplash.com/" target="_blank" class="text-[#E63946]">Unsplash</a>:<br><br>
+            • David Edelstein<br>
+            • Jezael Melgoza<br>
+            • Masaaki Komori<br>
+            • Su-San Lee<br>
+            • Syuhei Inoue<br>
+            • Clay Banks<br>
+            • Vista Wei<br>
+            • Yu Kato<br>
+            • Steven Diaz
+        </p>
+        <button onclick="creditsDialog.close()" class="mt-6 w-full py-2 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-widest font-bold rounded">Chiudi</button>
+    </div>
+</dialog>
 </body>
 
 </html>

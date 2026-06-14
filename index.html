@@ -16,7 +16,7 @@
 
     <!-- GESTIONE FONT E TEXTURE INLINE -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght=700&family=Space+Mono:wght=400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Mono:wght@400;700&display=swap');
 
         .font-rock-title {
             font-family: 'Syncopate', sans-serif;
@@ -201,10 +201,15 @@
         <section class="py-12 px-4 max-w-4xl mx-auto relative z-10">
 
             <div class="text-center mb-12">
+                <p class="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-[#E63946] font-ticket-mono mb-3">
+                    ✦ our itinerary ✦
+                </p>
                 <h2
-                    class="text-xl font-ticket-mono font-black text-[#1A1A1A] tracking-[0.2em] uppercase border-2 border-[#1A1A1A] inline-block px-6 py-2 rounded-md bg-white shadow-[4px_4px_0px_0px_#1A1A1A]">
-                    THE TOUR STAGES // 日程表
+                    class="text-xl md:text-2xl font-ticket-mono font-black text-[#1A1A1A] tracking-[0.22em] uppercase border border-[#1A1A1A]/80 inline-block px-6 py-3 rounded-2xl bg-white/95 shadow-[5px_5px_0px_0px_#1A1A1A] backdrop-blur-sm">
+                    <span class="block text-[10px] md:text-[11px] text-[#E63946] tracking-[0.35em] mb-1">THE TOUR TAPPES</span>
+                    <span class="inline-flex items-center gap-2">日程表 🎌</span>
                 </h2>
+                <div class="mx-auto mt-4 h-px w-20 bg-gradient-to-r from-transparent via-[#E63946] to-transparent"></div>
             </div>
 
             <!-- GRIGLIA DELLE TAPPE -->
@@ -217,22 +222,37 @@
                         <img src="./img/tokyo.avif" alt="Tokyo"
                             class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 opacity-90">
                         <span
-                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">TAPPA
                             01</span>
                     </div>
                     <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
                         <div>
                             <div
                                 class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
-                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">TOKYO //
-                                    東京</span>
-                                <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Neon &
-                                    Cyberpunk</span>
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider flex items-center gap-1 flex-wrap">
+                                    <span>TOKYO</span>
+                                    <span class="text-slate-400">//</span>
+                                    <span class="text-slate-600">東京</span>
+                                    <span class="text-[10px] text-slate-400 normal-case tracking-normal">(Tokyo)</span>
+                                </span>
+                                <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">🎹 Genere: Vaporwave e J Pop</span>
                             </div>
                             <h3 class="text-xl font-black uppercase text-[#1A1A1A]">Luci Psichedeliche & Rock Bar</h3>
-                            <p class="text-slate-500 text-sm mt-2 font-sans leading-relaxed">L'incrocio impazzito di
-                                Shibuya, i negozi di dischi storici, l'elettronica di Akihabara e le minuscole taverne
-                                di Shinjuku che sembrano uscite da una fanzine underground.</p>
+                            <p class="text-[10px] uppercase tracking-[0.25em] text-[#E63946] font-ticket-mono mt-1">Tokyo night set</p>
+                            <div class="mt-3 grid gap-2 text-sm text-slate-700 font-sans">
+                                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-3">
+                                    <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-500 mb-1 font-bold">Cosa ascoltare</span>
+                                    <span class="text-slate-700">Synthwave, J-pop retrò, suoni da arcade e club neon.</span>
+                                </div>
+                                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-3">
+                                    <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-500 mb-1 font-bold">Cosa mangiare</span>
+                                    <span class="text-slate-700">Ramen, takoyaki e snack da night market sotto le luci di Shibuya.</span>
+                                </div>
+                                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-3">
+                                    <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-500 mb-1 font-bold">Cosa vivere</span>
+                                    <span class="text-slate-700">Shibuya, Akihabara e le taverne underground che sembrano uscite da una fanzine.</span>
+                                </div>
+                            </div>
                         </div>
                         <div
                             class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs bg-slate-50 p-3 rounded border border-dashed">
@@ -249,15 +269,19 @@
                         <img src="./img/kyoto.avif" alt="Kyoto"
                             class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 opacity-90">
                         <span
-                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">TAPPA
                             02</span>
                     </div>
                     <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
                         <div>
                             <div
                                 class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
-                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">KYOTO //
-                                    京都</span>
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider flex items-center gap-1 flex-wrap">
+                                    <span>KYOTO</span>
+                                    <span class="text-slate-400">//</span>
+                                    <span class="text-slate-600">京都</span>
+                                    <span class="text-[10px] text-slate-400 normal-case tracking-normal">(Kyoto)</span>
+                                </span>
                                 <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Tradizione
                                     Unplugged</span>
                             </div>
@@ -282,15 +306,19 @@
                         <img src="./img/onsen.avif" alt="Onsen Ryokan"
                             class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 opacity-90">
                         <span
-                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">TAPPA
                             03</span>
                     </div>
                     <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
                         <div>
                             <div
                                 class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
-                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">ONSEN EXPERIENCE
-                                    // 温泉</span>
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider flex items-center gap-1 flex-wrap">
+                                    <span>ONSEN EXPERIENCE</span>
+                                    <span class="text-slate-400">//</span>
+                                    <span class="text-slate-600">温泉</span>
+                                    <span class="text-[10px] text-slate-400 normal-case tracking-normal">(onsen)</span>
+                                </span>
                                 <span
                                     class="text-[11px] bg-[#E63946]/10 text-[#E63946] px-2 py-0.5 rounded font-bold">Backstage
                                     VIP</span>
@@ -316,15 +344,19 @@
                         <img src="./img/osaka.jpg" alt="Osaka"
                             class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 opacity-90">
                         <span
-                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">STAGE
+                            class="absolute top-3 left-3 bg-[#E63946] text-white font-ticket-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded">TAPPA
                             04</span>
                     </div>
                     <div class="p-6 flex flex-col justify-between flex-1 font-ticket-mono">
                         <div>
                             <div
                                 class="flex justify-between items-center border-b border-dashed border-slate-200 pb-2 mb-3">
-                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider">OSAKA //
-                                    大阪</span>
+                                <span class="text-xs font-bold text-[#E63946] uppercase tracking-wider flex items-center gap-1 flex-wrap">
+                                    <span>OSAKA</span>
+                                    <span class="text-slate-400">//</span>
+                                    <span class="text-slate-600">大阪</span>
+                                    <span class="text-[10px] text-slate-400 normal-case tracking-normal">(Osaka)</span>
+                                </span>
                                 <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Heavy Street
                                     Food</span>
                             </div>

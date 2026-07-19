@@ -57,6 +57,23 @@
             filter: grayscale(0.15) contrast(1.08);
             transform: scale(1.03);
         }
+
+ .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        padding: 0 1rem; /* Padding laterale */
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 200px;
+        padding-top: 1rem; /* Padding superiore quando è aperto */
+        padding-bottom: 1rem; /* Padding inferiore quando è aperto */
+    }
+
+    .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+    }
     </style>
 </head>
 
@@ -366,7 +383,8 @@
             </div>
         </section>
 
-    </div> <script>
+    </div>
+    <script>
         const photoCards = Array.from(document.querySelectorAll('.photo-card'));
 
         function updatePhotoCards() {
@@ -391,8 +409,40 @@
         window.addEventListener('scroll', () => requestAnimationFrame(updatePhotoCards), { passive: true });
         window.addEventListener('load', updatePhotoCards);
         window.addEventListener('resize', updatePhotoCards);
-    </script>
 
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+        }
+    </script>
+<section id="faq" class="max-w-2xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-black uppercase text-center mb-8 font-rock-title">// LE VOSTRE DOMANDE, LE NOSTRE RISPOSTE</h2>
+    
+    <div class="space-y-4">
+        <!-- Item 1 -->
+        <div class="faq-item border-2 border-[#1A1A1A] rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleFaq(this)" class="w-full p-4 flex justify-between items-center font-bold uppercase">
+                <span>Dove si terrà la festa?</span>
+                <span class="faq-icon text-xl text-[#E63946]">+</span>
+            </button>
+            <!-- Modifica questa parte nel tuo HTML -->
+            <div class="faq-answer text-sm text-slate-700 font-sans">
+                La festa si terrà in un luogo magico che vi sveleremo a breve!
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item border-2 border-[#1A1A1A] rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleFaq(this)" class="w-full p-4 flex justify-between items-center font-bold uppercase">
+                <span>Come posso contribuire?</span>
+                <span class="faq-icon text-xl text-[#E63946]">+</span>
+            </button>
+            <div class="faq-answer text-sm text-slate-700 font-sans">
+                Puoi contribuire utilizzando l'IBAN che trovi nella sezione "Lista Nozze" qui sopra.
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="mt-16 text-center font-ticket-mono relative z-10 px-4">
     <div class="mx-auto max-w-5xl rounded-3xl border border-[#E63946]/20 bg-[#1A1A1A] px-6 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
         <p class="text-[#F8F8F8] text-[10px] tracking-[0.35em] uppercase mb-1">
